@@ -61,20 +61,36 @@ export default function App() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="text-center py-20 px-4 bg-white">
+            {/* Hero Section */}
+      <section className="text-center py-16 sm:py-20 px-4 bg-white">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Smart Website Visitor Reports</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Receive clean PDF reports daily via email — includes visitor location, top pages, time spent, and behavior insights.
         </p>
-        <div className="mt-8 flex justify-center">
-          <div className="cta-container">
-            <input type="email" placeholder="Enter your email" />
-            <button>Get Early Access</button>
+
+        <div className="cta-form mt-8 flex justify-center">
+          <div className="flex flex-wrap w-full max-w-[500px]">
+            <input 
+              type="email" 
+              placeholder="Enter your email"
+              className="flex-1 min-w-[250px] p-4 text-base border border-gray-300 focus:outline-none focus:border-gray-400 transition-colors"
+            />
+            <button 
+              type="button"
+              className="px-8 py-4 text-base bg-black text-white hover:bg-gray-800 transition-colors"
+            >
+              Get Early Access
+            </button>
           </div>
         </div>
-        <div className="mt-4">
-          <a href="/sample-report.pdf" download className="text-blue-600 underline text-sm">
+
+        <div className="mt-6">
+          <a 
+            href="/WatchTrace-Sample-Report.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#1a73e8] underline text-base font-medium hover:text-[#0c59cf] transition-colors"
+          >
             Download Sample Report
           </a>
         </div>
