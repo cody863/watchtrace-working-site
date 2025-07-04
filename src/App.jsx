@@ -1,21 +1,26 @@
 import React from "react";
+import "./assets/email-signup.css";
 
 export default function App() {
   return (
     <div className="font-sans">
-      {/* Navigation */}
-      <nav className="flex justify-between items-center px-6 py-4 shadow-sm bg-white sticky top-0 z-50">
-        <div className="flex items-center gap-2">
-          <img src="/logo.png" alt="WatchTrace Logo" className="h-7" />
-          <span className="font-bold text-xl text-blue-700">WatchTrace</span>
+      {/* Header */}
+      <header className="site-header">
+        <div className="container">
+          <div className="logo">
+            <img src="/logo.png" alt="WatchTrace Logo" />
+            <span className="logo-text">WatchTrace</span>
+          </div>
+          <nav className="main-nav">
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#sample">Sample Report</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-        <ul className="flex gap-6 text-sm text-gray-800 font-medium">
-          <li><a href="#features" className="hover:text-blue-600">Features</a></li>
-          <li><a href="#pricing" className="hover:text-blue-600">Pricing</a></li>
-          <li><a href="#sample" className="hover:text-blue-600">Sample Report</a></li>
-          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
+      </header>
 
       {/* Hero Section */}
       <section className="text-center py-20 px-4 bg-white">
@@ -24,12 +29,10 @@ export default function App() {
           Receive clean PDF reports daily via email — includes visitor location, top pages, time spent, and behavior insights.
         </p>
         <div className="mt-8 flex justify-center">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 w-64 border border-gray-300 rounded-l-md focus:outline-none"
-          />
-          <button className="px-6 py-2 bg-black text-white rounded-r-md hover:bg-gray-900">Get Early Access</button>
+          <div className="cta-container">
+            <input type="email" placeholder="Enter your email" />
+            <button>Get Early Access</button>
+          </div>
         </div>
         <div className="mt-4">
           <a href="/sample-report.pdf" download className="text-blue-600 underline text-sm">
