@@ -34,10 +34,18 @@ export default function App() {
       </header>
 
       {/* MOBILE MENU */}
-      <nav className={`${isMobileMenuOpen ? 'flex' : 'hidden'} flex-col space-y-4 px-4 py-4 bg-white shadow-md md:hidden`}>
-        <a href="#features" className="block text-lg">Features</a>
-        <a href="#pricing" className="block text-lg">Pricing</a>
-        <a href="#contact" className="block text-lg">Contact</a>
+      <nav className={`fixed inset-0 z-50 flex flex-col bg-black text-white px-6 py-8 space-y-6 shadow-lg transition-transform transform ${isMobileMenuOpen ? '' : 'translate-x-full hidden'}`}>
+        {/* Close Button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="text-white text-2xl absolute top-4 right-4"
+        >
+          ✕
+        </button>
+        
+        <a href="#features" className="block text-lg hover:text-blue-400">Features</a>
+        <a href="#pricing" className="block text-lg hover:text-blue-400">Pricing</a>
+        <a href="#contact" className="block text-lg hover:text-blue-400">Contact</a>
       </nav>
 
       {/* Hero Section */}
