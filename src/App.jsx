@@ -33,20 +33,33 @@ export default function App() {
         </button>
       </header>
 
-      {/* MOBILE MENU */}
-      <nav className={`fixed inset-0 z-50 flex flex-col bg-black text-white px-6 py-8 space-y-6 shadow-lg transition-transform transform ${isMobileMenuOpen ? '' : 'translate-x-full hidden'}`}>
-        {/* Close Button */}
-        <button 
-          onClick={() => setIsMobileMenuOpen(false)}
-          className="text-white text-2xl absolute top-4 right-4"
-        >
-          ✕
-        </button>
-        
-        <a href="#features" className="block text-lg hover:text-blue-400">Features</a>
-        <a href="#pricing" className="block text-lg hover:text-blue-400">Pricing</a>
-        <a href="#contact" className="block text-lg hover:text-blue-400">Contact</a>
-      </nav>
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 z-50 bg-black/70 ${isMobileMenuOpen ? '' : 'hidden'}`}
+        onClick={(e) => {
+          // Close when clicking overlay
+          if (e.target === e.currentTarget) {
+            setIsMobileMenuOpen(false);
+          }
+        }}
+      >
+        {/* Slide-in drawer panel */}
+        <div className="absolute top-0 right-0 w-3/4 h-full bg-[#212121] text-white p-8 shadow-2xl transform transition-transform duration-300 ease-in-out">
+          {/* Close icon */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-3xl absolute top-4 right-6"
+          >
+            &times;
+          </button>
+          {/* Links */}
+          <nav className="mt-12 flex flex-col space-y-6">
+            <a href="#features" className="text-xl font-medium hover:text-blue-400">Features</a>
+            <a href="#pricing" className="text-xl font-medium hover:text-blue-400">Pricing</a>
+            <a href="#contact" className="text-xl font-medium hover:text-blue-400">Contact</a>
+          </nav>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section className="text-center py-20 px-4 bg-white">
