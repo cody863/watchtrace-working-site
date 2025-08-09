@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WatchTrace – Live Tracker Test</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 32px auto; padding: 0 16px; }
+    .row { display:flex; gap:12px; margin: 8px 0; align-items:center; }
+    input, select, button, textarea { padding: 8px 10px; font-size: 14px; }
+    button { cursor:pointer }
+    code { background:#f6f6f6; padding:2px 6px; border-radius:6px }
+    .log { background:#0b1220; color:#e8f0ff; padding:12px; border-radius:8px; min-height:120px; white-space:pre-wrap }
+  </style>
+  <!-- Load your real tracker (tests beforeunload path) -->
+  <script src="/tracker.js" defer></script>
+</head>
+<body>
+  <h1>WatchTrace – Live Tracker Test</h1>
+  <p>This page lets you send test visits to <code>/api/track</code> via the Netlify proxy.</p>
+
+  <div class="row">
+    <label>Site ID</label>
+    <input id="siteId" value="dacafb" size="10"/>
+    <label>Time Spent (sec)</label>
+    <input id="secs" type="number" value="37" min="0" style="width:100px"/>
+  </div>
+
+  <div class="row">
+    <label>Path</label>
+    <input id="path" value="/test.html" style="width:240px"/>
+    <label>Referrer</label>
+    <input id="ref" value="https://google.com" style="width:240px"/>
+  </div>
+
+  <div class="row">
+    <button id="btnSend">Send sample visit</button>
+    <button id="btnBurst">Send 5 visits (burst)</button>
+  </div>
+
+  <h3>Console</h3>
+  <div id="out" class="log"></div>
+
+  <script>
+    const out = document.getElementById('out');
+    const log = (...args) => { out.textContent += args.join(' ') + '\n'; };
+
+    async function sendVisit() {
+      const payload = {
+        siteId: document.getElementById('siteId').value.trim(),
+        pages: [document.getElementById('path').value],
+        url: location.href,
+        referrer: document.getElementById('ref').value,
+        timestamp: new Date().toISOString(),
+        timeSpent: Number(document.getElementById('secs').value) || 0
+      };
+      log('→ POST /api/track', JSON.stringify(payload));
+      try {
+        const res = await fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        log('← status', res.status, res.statusText);
+        const text = await res.text().catch(()=> '');
+        if (text) log('← body', text);
+      } catch (e) {
+        log('ERR', e.message || e);
+      }
+    }
+
+    async function burst(n=5) {
+      for (let i=0;i<n;i++) {
+        await sendVisit();
+        await new Promise(r => setTimeout(r, 300)); // small spacing
+      }
+    }
+
+    document.getElementById('btnSend').onclick = sendVisit;
+    document.getElementById('btnBurst').onclick = () => burst(5);
+  </script>
+</body>
+</html>
