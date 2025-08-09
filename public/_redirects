@@ -1,1 +1,1 @@
-/api/*  https://visitor-tracker.fly.dev/:splat  200
+/api/*  https://visitor-tracker.fly.dev/api/:splat  200
