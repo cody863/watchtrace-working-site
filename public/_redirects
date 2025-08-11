@@ -1,1 +1,5 @@
-/api/*   https://visitor-tracker.fly.dev/api/:splat   200
+/api/*           https://visitor-tracker.fly.dev/api/:splat    200
+/manual-report   https://visitor-tracker.fly.dev/manual-report  200
+/register        https://visitor-tracker.fly.dev/register       200
+/trigger-daily   https://visitor-tracker.fly.dev/trigger-daily  200
+/generate-report https://visitor-tracker.fly.dev/generate-report 200

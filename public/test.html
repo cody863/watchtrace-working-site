@@ -11,6 +11,11 @@
     button { cursor:pointer }
     code { background:#f6f6f6; padding:2px 6px; border-radius:6px }
     .log { background:#0b1220; color:#e8f0ff; padding:12px; border-radius:8px; min-height:120px; white-space:pre-wrap }
+    .ping-btn { background:#f0f9ff; color:#0369a1; border:1px solid #0369a1; border-radius:4px; }
+    .ping-btn:hover { background:#e0f2fe; }
+    #pingStatus { font-size:14px; }
+    #pingStatus.success { color:#059669; }
+    #pingStatus.error { color:#dc2626; }
   </style>
   <!-- Load your real tracker (tests beforeunload path) -->
   <script src="/tracker.js" defer></script>
@@ -31,6 +36,11 @@
     <input id="path" value="/test.html" style="width:240px"/>
     <label>Referrer</label>
     <input id="ref" value="https://google.com" style="width:240px"/>
+  </div>
+
+  <div class="row">
+    <button id="btnPing" class="ping-btn">🔄 Test Connection</button>
+    <span id="pingStatus"></span>
   </div>
 
   <div class="row">
@@ -76,8 +86,42 @@
       }
     }
 
+    async function testConnection() {
+      const pingStatus = document.getElementById('pingStatus');
+      const pingBtn = document.getElementById('btnPing');
+      
+      pingBtn.disabled = true;
+      pingStatus.className = '';
+      pingStatus.textContent = 'Testing connection...';
+      
+      try {
+        const start = Date.now();
+        const res = await fetch('/api/ping');
+        const elapsed = Date.now() - start;
+        
+        if (res.ok) {
+          const data = await res.json();
+          pingStatus.className = 'success';
+          pingStatus.textContent = `✅ Connected! (${elapsed}ms) Server time: ${new Date(data.time).toLocaleTimeString()}`;
+          log('← Ping successful:', JSON.stringify(data));
+        } else {
+          throw new Error(`HTTP ${res.status}`);
+        }
+      } catch (err) {
+        pingStatus.className = 'error';
+        pingStatus.textContent = `❌ Connection failed: ${err.message}`;
+        log('← Ping failed:', err.message);
+      } finally {
+        pingBtn.disabled = false;
+      }
+    }
+
+    document.getElementById('btnPing').onclick = testConnection;
     document.getElementById('btnSend').onclick = sendVisit;
     document.getElementById('btnBurst').onclick = () => burst(5);
+
+    // Test connection on page load
+    testConnection();
   </script>
 </body>
 </html>
