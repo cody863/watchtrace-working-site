@@ -175,6 +175,28 @@ export default function App() {
         <p>⏱️ Privacy First | 🧾 Sample Report Available</p>
       </div>
 
+      {/* Policy Sections */}
+      <section id="privacy" className="px-6 py-12 bg-white text-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4">Privacy Policy</h2>
+          <p>We respect your privacy. Your data is never shared or sold. Reports are generated securely and only accessible to you.</p>
+        </div>
+      </section>
+
+      <section id="terms" className="px-6 py-12 bg-gray-50 text-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4">Terms & Conditions</h2>
+          <p>By using WatchTrace, you agree to our service limitations, fair use policies, and data collection for analytics purposes.</p>
+        </div>
+      </section>
+
+      <section id="contact" className="px-6 py-12 bg-white text-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4">Contact Us</h2>
+          <p>Email: <a href="mailto:support@watchtrace.app" className="text-blue-600 hover:underline">support@watchtrace.app</a></p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -184,9 +206,9 @@ export default function App() {
           </div>
 
           <div className="flex space-x-6 text-sm">
-            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
-            <a href="/terms" className="hover:text-white">Terms</a>
-            <a href="mailto:support@watchtrace.app" className="hover:text-white">Contact</a>
+            <a href="#privacy" className="hover:text-white">Privacy Policy</a>
+            <a href="#terms" className="hover:text-white">Terms</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
           </div>
         </div>
       </footer>
