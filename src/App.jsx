@@ -169,12 +169,6 @@ export default function App() {
 
       <hr className="border-t border-gray-300 my-8 w-3/4 mx-auto" />
 
-      {/* Trust Signals Section */}
-      <div className="max-w-4xl mx-auto text-center mt-12 mb-6 text-sm text-gray-600 space-y-2">
-        <p>🔒 SSL Secured | 📧 Verified Email Delivery | 🧠 AI-Powered Reports</p>
-        <p>⏱️ Privacy First | 🧾 Sample Report Available</p>
-      </div>
-
       {/* Policy Sections */}
       <section id="contact" className="px-6 py-12 bg-white text-gray-800">
         <div className="max-w-4xl mx-auto">
@@ -235,18 +229,28 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-8 px-4">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0 text-center md:text-left">
-            <h2 className="text-xl font-semibold">WatchTrace</h2>
-            <p className="text-sm">© {new Date().getFullYear()} WatchTrace. All rights reserved.</p>
+      <footer className="bg-gray-900 text-white py-6 px-4 mt-12">
+        <div className="max-w-7xl mx-auto text-center space-y-4">
+          {/* Trust Badges */}
+          <div className="text-sm text-gray-300 space-x-4">
+            <span>🔒 SSL Secured</span>
+            <span>📧 Verified Email Delivery</span>
+            <span>🧠 AI-Powered Reports</span>
+            <span>⏱️ Privacy First</span>
+            <span>📄 Sample Report Available</span>
           </div>
 
-          <div className="flex space-x-6 text-sm">
+          {/* Footer Links */}
+          <div className="text-xs text-gray-400 space-x-4">
             <a href="#privacy" className="hover:text-white">Privacy Policy</a>
-            <a href="#terms" className="hover:text-white">Terms</a>
+            <a href="#terms" className="hover:text-white">Terms & Conditions</a>
             <a href="#contact" className="hover:text-white">Contact</a>
           </div>
+
+          {/* Copyright */}
+          <p className="text-xs text-gray-500">
+            © {new Date().getFullYear()} <strong>WatchTrace</strong>. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>
