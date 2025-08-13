@@ -68,7 +68,7 @@ export default function App() {
           Receive clean PDF reports daily via email — includes visitor location, top pages, time spent, and behavior insights.
         </p>
 
-        <div className="cta-form mt-8 flex justify-center">
+        <div className="cta-form mt-8 mb-16 flex justify-center">
           <div className="flex flex-wrap w-full max-w-[500px]">
             <input 
               type="email" 
@@ -167,20 +167,27 @@ export default function App() {
         </div>
       </section>
 
+      <hr className="border-t border-gray-300 my-8 w-3/4 mx-auto" />
+
+      {/* Trust Signals Section */}
+      <div className="max-w-4xl mx-auto text-center mt-12 mb-6 text-sm text-gray-600 space-y-2">
+        <p>🔒 SSL Secured | 📧 Verified Email Delivery | 🧠 AI-Powered Reports</p>
+        <p>⏱️ Privacy First | 🧾 Sample Report Available</p>
+      </div>
+
       {/* Footer */}
-      <footer className="bg-black text-white text-sm py-6 px-4 mt-10">
-        <div className="max-w-4xl mx-auto flex justify-between items-center flex-wrap gap-4">
-          <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="WatchTrace Logo" className="h-6" />
-            <span className="font-semibold">WatchTrace</span>
+      <footer className="bg-gray-900 text-gray-300 py-8 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0 text-center md:text-left">
+            <h2 className="text-xl font-semibold">WatchTrace</h2>
+            <p className="text-sm">© {new Date().getFullYear()} WatchTrace. All rights reserved.</p>
           </div>
-          <div className="flex gap-4">
-            <a href="#features" className="hover:underline">Features</a>
-            <a href="#pricing" className="hover:underline">Pricing</a>
-            <a href="#sample" className="hover:underline">Sample</a>
-            <a href="#contact" className="hover:underline">Contact</a>
+
+          <div className="flex space-x-6 text-sm">
+            <a href="/privacy" className="hover:text-white">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white">Terms</a>
+            <a href="mailto:support@watchtrace.app" className="hover:text-white">Contact</a>
           </div>
-          <p className="text-gray-400">© {new Date().getFullYear()} WatchTrace. All rights reserved.</p>
         </div>
       </footer>
     </div>
