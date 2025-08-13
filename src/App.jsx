@@ -192,8 +192,45 @@ export default function App() {
 
       <section id="contact" className="px-6 py-12 bg-white text-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold mb-4">Contact Us</h2>
-          <p>Email: <a href="mailto:support@watchtrace.app" className="text-blue-600 hover:underline">support@watchtrace.app</a></p>
+          <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
+          <p className="mb-6">Have a question or feedback? Send us a message below:</p>
+          
+          <form action="https://formspree.io/f/mnnzwejw" method="POST" className="max-w-lg space-y-4">
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="Your Name" 
+              required 
+              className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-blue-500 transition-colors" 
+            />
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Your Email" 
+              required 
+              className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-blue-500 transition-colors" 
+            />
+            <textarea 
+              name="message" 
+              rows="4" 
+              placeholder="Your Message" 
+              required 
+              className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-blue-500 transition-colors"
+            ></textarea>
+            <button 
+              type="submit" 
+              className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
+          
+          <p className="mt-6 text-sm text-gray-600">
+            Alternatively, you can email us directly at:{" "}
+            <a href="mailto:support@watchtrace.app" className="text-blue-600 hover:underline">
+              support@watchtrace.app
+            </a>
+          </p>
         </div>
       </section>
 
