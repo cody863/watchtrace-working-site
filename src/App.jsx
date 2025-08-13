@@ -176,20 +176,6 @@ export default function App() {
       </div>
 
       {/* Policy Sections */}
-      <section id="privacy" className="px-6 py-12 bg-white text-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold mb-4">Privacy Policy</h2>
-          <p>We respect your privacy. Your data is never shared or sold. Reports are generated securely and only accessible to you.</p>
-        </div>
-      </section>
-
-      <section id="terms" className="px-6 py-12 bg-gray-50 text-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-xl font-bold mb-4">Terms & Conditions</h2>
-          <p>By using WatchTrace, you agree to our service limitations, fair use policies, and data collection for analytics purposes.</p>
-        </div>
-      </section>
-
       <section id="contact" className="px-6 py-12 bg-white text-gray-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
@@ -231,6 +217,20 @@ export default function App() {
               support@watchtrace.app
             </a>
           </p>
+        </div>
+      </section>
+
+      <section id="privacy" className="px-6 py-12 bg-gray-50 text-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4">Privacy Policy</h2>
+          <p>We respect your privacy. Your data is never shared or sold. Reports are generated securely and only accessible to you.</p>
+        </div>
+      </section>
+
+      <section id="terms" className="px-6 py-12 bg-white text-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl font-bold mb-4">Terms & Conditions</h2>
+          <p>By using WatchTrace, you agree to our service limitations, fair use policies, and data collection for analytics purposes.</p>
         </div>
       </section>
 
