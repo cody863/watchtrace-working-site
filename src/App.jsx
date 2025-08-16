@@ -120,49 +120,47 @@ export default function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="bg-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Straightforward pricing. No hidden fees.
-          </h2>
-          <p className="text-gray-600 mb-12 text-lg">
-            Choose a plan that fits your website's needs.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Free Plan */}
-          <div className="border rounded-2xl shadow-sm p-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Free</h3>
-            <p className="text-gray-600 mb-4">Ideal for getting started.</p>
-            <ul className="text-gray-700 space-y-2 mb-6">
-              <li>✅ 4 daily reports per month</li>
-              <li>✅ PDF reports via email</li>
-            </ul>
-            <div className="text-3xl font-bold text-gray-800 mb-6">$0/mo</div>
-            <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg">
-              Get Started
-            </button>
-          </div>
-
-          {/* Premium Plan */}
-          <div className="border-2 border-blue-600 bg-blue-50 rounded-2xl shadow-lg p-8 relative">
-            <div className="absolute top-0 right-0 mt-2 mr-2 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-              Most Popular
+      <section className="bg-gray-900 py-16 text-white" id="pricing">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Simple Pricing</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Free Plan */}
+            <div className="bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-700">
+              <h3 className="text-2xl font-semibold mb-4">Free</h3>
+              <p className="text-gray-300 mb-6">Ideal for testing and small projects.</p>
+              <ul className="space-y-3 mb-6">
+                <li>✔️ 4 Daily Reports / Month</li>
+                <li>✔️ PDF Reports via Email</li>
+                <li>✔️ Basic Visitor Info</li>
+                <li>✔️ 1 Website</li>
+              </ul>
+              <div className="text-3xl font-bold mb-4">$0</div>
+              <a
+                href="#"
+                className="block text-center bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-xl font-semibold"
+              >
+                Start for Free
+              </a>
             </div>
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Premium</h3>
-            <p className="text-blue-800 mb-4">For active website owners.</p>
-            <ul className="text-blue-900 space-y-2 mb-6">
-              <li>✅ Unlimited daily reports</li>
-              <li>✅ PDF reports via email</li>
-              <li>✅ On-demand PDF report (manual)</li>
-              <li>✅ Priority email support</li>
-              <li>🚀 Weekly & Monthly Reports <span className="text-sm">(coming soon)</span></li>
-            </ul>
-            <div className="text-3xl font-bold text-blue-900 mb-6">$9.99/mo</div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">
-              Upgrade Now
-            </button>
+
+            {/* Premium Plan */}
+            <div className="bg-indigo-700 rounded-2xl p-8 shadow-xl border-4 border-indigo-400 transform scale-105">
+              <h3 className="text-2xl font-semibold mb-4">Premium</h3>
+              <p className="text-indigo-100 mb-6">Best for growing sites & professionals.</p>
+              <ul className="space-y-3 mb-6">
+                <li>🚀 Unlimited Daily Reports</li>
+                <li>📩 Manual Report Downloads</li>
+                <li>💡 Multiple Website Support</li>
+                <li>⚡ Priority Email Support</li>
+              </ul>
+              <div className="text-3xl font-bold mb-4">$9.99<span className="text-lg font-medium">/month</span></div>
+              <a
+                href="#"
+                className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
+              >
+                Upgrade to Premium
+              </a>
+            </div>
           </div>
         </div>
       </section>
