@@ -75,12 +75,14 @@ export default function App() {
               placeholder="Enter your email"
               className="flex-1 min-w-[250px] p-4 text-base border border-gray-300 focus:outline-none focus:border-gray-400 transition-colors"
             />
-            <button 
-              type="button"
+            <a 
+              href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 text-base bg-black text-white hover:bg-gray-800 transition-colors"
             >
               Get Early Access
-            </button>
+            </a>
           </div>
         </div>
 
@@ -126,17 +128,21 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Free Plan */}
             <div className="bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-700">
-              <h3 className="text-2xl font-semibold mb-4">Free</h3>
-              <p className="text-gray-300 mb-6">Ideal for testing and small projects.</p>
+              <h3 className="text-2xl font-semibold mb-4">Free 14-Day Trial</h3>
+              <p className="text-gray-300 mb-6">Full access to all premium features.</p>
               <ul className="space-y-3 mb-6">
-                <li>✔️ 4 Daily Reports / Month</li>
-                <li>✔️ PDF Reports via Email</li>
-                <li>✔️ Basic Visitor Info</li>
-                <li>✔️ 1 Website</li>
+                <li>📄 Daily visitor reports in PDF format (both auto and manual)</li>
+                <li>🌍 Top countries, time spent, and individual logs</li>
+                <li>⏰ Timezone-based delivery at 9 AM</li>
+                <li>🧩 Simple 1-line integration script</li>
+                <li>🎨 Clean professional layout with branding</li>
+                <li>🔐 No credit card required to start</li>
               </ul>
               <div className="text-3xl font-bold mb-4">$0</div>
               <a
-                href="#"
+                href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-xl font-semibold"
               >
                 Start for Free
@@ -155,7 +161,9 @@ export default function App() {
               </ul>
               <div className="text-3xl font-bold mb-4">$9.99<span className="text-lg font-medium">/month</span></div>
               <a
-                href="#"
+                href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
               >
                 Upgrade to Premium
