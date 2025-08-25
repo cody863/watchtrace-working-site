@@ -69,7 +69,7 @@ export default function App() {
 
       {/* How It Works Section */}
       <section id="how-it-works" className="py-16 px-4 bg-[#0b0f19] text-white text-center">
-        <h2 className="text-4xl font-bold mb-3">📊 How It Works</h2>
+        <h2 className="text-4xl font-bold mb-3">🛰️ How It Works</h2>
         <p className="text-lg text-[#b0b8c4] max-w-3xl mx-auto mb-10">
           WatchTrace turns your website traffic into actionable insights — automatically delivered to your inbox every morning.
         </p>
