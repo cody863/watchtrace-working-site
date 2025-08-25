@@ -17,6 +17,7 @@ export default function App() {
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex space-x-6 font-medium">
           <a href="#features" className="hover:text-blue-600">Features</a>
+          <a href="#how-it-works" className="hover:text-blue-600">How It Works</a>
           <a href="#pricing" className="hover:text-blue-600">Pricing</a>
           <a href="#contact" className="hover:text-blue-600">Contact</a>
         </nav>
@@ -55,6 +56,7 @@ export default function App() {
           {/* Links */}
           <nav className="mt-12 flex flex-col space-y-6">
             <a href="#features" className="text-xl font-medium hover:text-blue-400">Features</a>
+            <a href="#how-it-works" className="text-xl font-medium hover:text-blue-400">How It Works</a>
             <a href="#pricing" className="text-xl font-medium hover:text-blue-400">Pricing</a>
             <a href="#contact" className="text-xl font-medium hover:text-blue-400">Contact</a>
           </nav>
@@ -84,6 +86,7 @@ export default function App() {
               Get Early Access
             </a>
           </div>
+
         </div>
 
         <div className="mt-6">
@@ -118,6 +121,48 @@ export default function App() {
             <span className="text-2xl">📊</span>
             <p className="text-gray-700">Shows top visitors by time spent</p>
           </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-16 px-4 bg-[#0b0f19] text-white text-center">
+        <h2 className="text-4xl font-bold mb-3">📊 How It Works</h2>
+        <p className="text-lg text-[#b0b8c4] max-w-3xl mx-auto mb-10">
+          WatchTrace turns your website traffic into actionable insights — automatically delivered to your inbox every morning.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-10 max-w-6xl mx-auto">
+          <div className="flex-1 max-w-[300px]">
+            <h3 className="text-2xl font-semibold mb-3">1. You Install</h3>
+            <p className="text-[#b0b8c4]">
+              Copy a simple JS snippet to your website — no coding required. We start tracking visitor sessions immediately.
+            </p>
+          </div>
+          <div className="flex-1 max-w-[300px]">
+            <h3 className="text-2xl font-semibold mb-3">2. We Monitor</h3>
+            <p className="text-[#b0b8c4]">
+              We record visit data like pages viewed, country, time spent, and user behavior — safely and in real time.
+            </p>
+          </div>
+          <div className="flex-1 max-w-[300px]">
+            <h3 className="text-2xl font-semibold mb-3">3. You Receive Reports</h3>
+            <p className="text-[#b0b8c4]">
+              Each morning at 9 AM (your time), you receive a clean PDF report showing daily insights, top visitors, and traffic summaries.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-2xl font-semibold mb-3">🚀 See It in Action</h3>
+          <p className="max-w-3xl mx-auto text-[#b0b8c4]">
+            You install WatchTrace on your site. We detect visits like:
+            <br />
+            - Visitor from Germany spent 7m 24s on `/pricing`<br />
+            - 4 returning users visited again this week<br />
+            - Top page: `/checkout`<br />
+            <br />
+            ⏱ By 9 AM, a smart PDF lands in your inbox with everything summarized.
+          </p>
         </div>
       </section>
 
