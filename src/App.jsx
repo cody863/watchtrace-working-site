@@ -1,69 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./assets/email-signup.css";
+import WatchTraceHeader from './components/Header';
 
 export default function App() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   return (
     <div className="font-sans">
-      {/* Header */}
-      <header className="flex justify-between items-center px-4 py-3 shadow-md bg-white sticky top-0 z-50">
-        {/* LOGO + BRAND */}
-        <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="WatchTrace Logo" className="h-8" />
-          <span className="text-xl font-bold text-blue-700">WatchTrace</span>
-        </div>
+      <WatchTraceHeader />
 
-        {/* DESKTOP NAV */}
-        <nav className="hidden md:flex space-x-6 font-medium">
-          <a href="#features" className="hover:text-blue-600">Features</a>
-          <a href="#how-it-works" className="hover:text-blue-600">How It Works</a>
-          <a href="#pricing" className="hover:text-blue-600">Pricing</a>
-          <a href="#contact" className="hover:text-blue-600">Contact</a>
-        </nav>
-
-        {/* MOBILE MENU BUTTON */}
-        <button 
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden focus:outline-none"
-        >
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </header>
-
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-50 bg-black/70 ${isMobileMenuOpen ? '' : 'hidden'}`}
-        onClick={(e) => {
-          // Close when clicking overlay
-          if (e.target === e.currentTarget) {
-            setIsMobileMenuOpen(false);
-          }
-        }}
-      >
-        {/* Slide-in drawer panel */}
-        <div className="absolute top-0 right-0 w-3/4 h-full bg-[#212121] text-white p-8 shadow-2xl transform transition-transform duration-300 ease-in-out">
-          {/* Close icon */}
-          <button 
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-3xl absolute top-4 right-6"
-          >
-            &times;
-          </button>
-          {/* Links */}
-          <nav className="mt-12 flex flex-col space-y-6">
-            <a href="#features" className="text-xl font-medium hover:text-blue-400">Features</a>
-            <a href="#how-it-works" className="text-xl font-medium hover:text-blue-400">How It Works</a>
-            <a href="#pricing" className="text-xl font-medium hover:text-blue-400">Pricing</a>
-            <a href="#contact" className="text-xl font-medium hover:text-blue-400">Contact</a>
-          </nav>
-        </div>
-      </div>
-
-            {/* Hero Section */}
+      {/* Hero Section */}
       <section className="text-center py-16 sm:py-20 px-4 bg-white">
         <h1 className="text-4xl font-bold mb-4 text-gray-900">Smart Website Visitor Reports</h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -86,7 +30,6 @@ export default function App() {
               Get Early Access
             </a>
           </div>
-
         </div>
 
         <div className="mt-6">
