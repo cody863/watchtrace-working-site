@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 
-export default function WatchTraceHeader() {
+const WatchTraceHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -46,8 +46,57 @@ export default function WatchTraceHeader() {
             </div>
           </div>
 
-          {/* Mobile menu button - Always visible */}
-          <div>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <a 
+              href="#features" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+            >
+              Features
+            </a>
+            <a 
+              href="#how-it-works" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-blue-600 font-medium border-b-2 border-blue-600 pb-1"
+            >
+              How It Works
+            </a>
+            <a 
+              href="#pricing" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+            >
+              Pricing
+            </a>
+            <a 
+              href="#contact" 
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-200"
+            >
+              Contact
+            </a>
+            
+            {/* CTA Button */}
+            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+              Get Early Access
+            </button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-gray-900 p-2 rounded-md transition-colors duration-200"
@@ -65,18 +114,50 @@ export default function WatchTraceHeader() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="border-t border-gray-200 py-4 bg-white">
+          <div className="md:hidden border-t border-gray-200 py-4 bg-white">
             <div className="space-y-4">
-              <a href="#features" className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200">
+              <a 
+                href="#features" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200"
+              >
                 Features
               </a>
-              <a href="#how-it-works" className="block text-blue-600 font-medium py-2 px-4 rounded-md bg-blue-50">
+              <a 
+                href="#how-it-works" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block text-blue-600 font-medium py-2 px-4 rounded-md bg-blue-50"
+              >
                 How It Works
               </a>
-              <a href="#pricing" className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200">
+              <a 
+                href="#pricing" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200"
+              >
                 Pricing
               </a>
-              <a href="#contact" className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200">
+              <a 
+                href="#contact" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+                className="block text-gray-600 hover:text-blue-600 font-medium py-2 px-4 rounded-md hover:bg-blue-50 transition-all duration-200"
+              >
                 Contact
               </a>
               <div className="pt-2">
@@ -90,4 +171,6 @@ export default function WatchTraceHeader() {
       </div>
     </header>
   );
-}
+};
+
+export default WatchTraceHeader;
