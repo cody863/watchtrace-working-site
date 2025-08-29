@@ -87,12 +87,23 @@ export default function App() {
               We record visit data like pages viewed, country, time spent, and user behavior — safely and in real time.
             </p>
           </div>
-          <div className="flex-1 max-w-[300px]">
-            <h3 className="text-2xl font-semibold mb-3">3. You Receive Reports</h3>
-            <p className="text-[#b0b8c4]">
-              Each morning at 9 AM (your time), you receive a clean PDF report showing daily insights, top visitors, and traffic summaries.
-            </p>
-          </div>
+                     <div className="flex-1 max-w-[300px]">
+             <h3 className="text-2xl font-semibold mb-3">3. You Receive Reports</h3>
+             <p className="text-[#b0b8c4]">
+               Each morning at 9 AM (your time), you receive a clean PDF report showing daily insights, top visitors, and traffic summaries.
+             </p>
+             <div className="mt-4">
+                               <a 
+                  href="/WatchTrace Setup Guide 📄.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#06b6d4] hover:text-[#0891b2] transition-colors font-medium"
+                >
+                  <span>📄</span>
+                  <span>Download Setup Guide</span>
+                </a>
+             </div>
+           </div>
         </div>
 
         <div className="mt-16">
