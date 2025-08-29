@@ -21,14 +21,14 @@ export default function App() {
               placeholder="Enter your email"
               className="flex-1 min-w-[250px] p-4 text-base border border-gray-300 focus:outline-none focus:border-gray-400 transition-colors"
             />
-            <a 
-              href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 text-base bg-black text-white hover:bg-gray-800 transition-colors"
-            >
-              Get Early Access
-            </a>
+                                    <a 
+                          href="https://forms.gle/roLPJ3actu4GUTET9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-8 py-4 text-base bg-black text-white hover:bg-gray-800 transition-colors"
+                        >
+                          Get Early Access
+                        </a>
           </div>
         </div>
 
@@ -127,14 +127,14 @@ export default function App() {
                 <li>🔐 No credit card required to start</li>
               </ul>
               <div className="text-3xl font-bold mb-4">$0</div>
-              <a
-                href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-xl font-semibold"
-              >
-                Start for Free
-              </a>
+                                        <a
+                            href="https://forms.gle/roLPJ3actu4GUTET9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-center bg-gray-700 hover:bg-gray-600 transition-colors px-6 py-3 rounded-xl font-semibold"
+                          >
+                            Start for Free
+                          </a>
             </div>
 
             {/* Premium Plan */}
@@ -148,14 +148,14 @@ export default function App() {
                 <li>⚡ Priority Email Support</li>
               </ul>
               <div className="text-3xl font-bold mb-4">$9.99<span className="text-lg font-medium">/month</span></div>
-              <a
-                href="https://forms.gle/6AiP3h1JPUmtS7Ki7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
-              >
-                Upgrade to Premium
-              </a>
+                                        <a
+                            href="https://forms.gle/roLPJ3actu4GUTET9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
+                          >
+                            Upgrade to Premium
+                          </a>
             </div>
           </div>
         </div>

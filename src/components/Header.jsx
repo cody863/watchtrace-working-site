@@ -90,9 +90,14 @@ const WatchTraceHeader = () => {
             </a>
             
             {/* CTA Button */}
-            <button className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg">
+            <a 
+              href="https://forms.gle/roLPJ3actu4GUTET9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg inline-block"
+            >
               Get Early Access
-            </button>
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -160,11 +165,16 @@ const WatchTraceHeader = () => {
               >
                 Contact
               </a>
-              <div className="pt-2">
-                <button className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                  Get Early Access
-                </button>
-              </div>
+                             <div className="pt-2">
+                 <a 
+                   href="https://forms.gle/roLPJ3actu4GUTET9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors duration-200 shadow-lg inline-block text-center"
+                 >
+                   Get Early Access
+                 </a>
+               </div>
             </div>
           </div>
         )}
