@@ -3,6 +3,8 @@ import "./assets/email-signup.css";
 import WatchTraceHeader from './components/Header';
 
 export default function App() {
+  // No useEffect needed for PayPal - using hosted button instead
+
   return (
     <div className="font-sans">
       <WatchTraceHeader />
@@ -159,14 +161,19 @@ export default function App() {
                 <li>⚡ Priority Email Support</li>
               </ul>
               <div className="text-3xl font-bold mb-4">$9.99<span className="text-lg font-medium">/month</span></div>
-                                                                                 <a
-                             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUNS947GNGWDL"
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
-                           >
-                             Upgrade to Premium — $9.99/month
-                           </a>
+                                                                                                                                                                           <button
+                                onClick={() => {
+                                  // Open PayPal subscription in new tab
+                                  const paypalUrl = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUNS947GNGWDL';
+                                  window.open(paypalUrl, '_blank', 'noopener,noreferrer');
+                                }}
+                                                                 className="w-full bg-[#2F80ED] hover:bg-yellow-400 hover:text-gray-900 font-semibold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                              >
+                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M20.067 8.478c.492.315.844.825.844 1.406 0 .58-.352 1.09-.844 1.406l-1.406.844c-.492.315-1.09.844-1.406.844-.316 0-.914-.529-1.406-.844l-1.406-.844c-.492-.316-.844-.825-.844-1.406 0-.58.352-1.09.844-1.406l1.406-.844c.492-.315 1.09-.844 1.406-.844.316 0 .914.529 1.406.844l1.406.844z"/>
+                                </svg>
+                                Upgrade to Premium — $9.99/month
+                              </button>
             </div>
           </div>
         </div>
