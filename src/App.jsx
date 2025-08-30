@@ -159,14 +159,14 @@ export default function App() {
                 <li>⚡ Priority Email Support</li>
               </ul>
               <div className="text-3xl font-bold mb-4">$9.99<span className="text-lg font-medium">/month</span></div>
-                                        <a
-                            href="https://forms.gle/roLPJ3actu4GUTET9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
-                          >
-                            Upgrade to Premium
-                          </a>
+                                                                                 <a
+                             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WUNS947GNGWDL"
+                             target="_blank"
+                             rel="noopener noreferrer"
+                             className="block text-center bg-white text-indigo-700 hover:bg-indigo-100 transition-colors px-6 py-3 rounded-xl font-semibold"
+                           >
+                             Upgrade to Premium — $9.99/month
+                           </a>
             </div>
           </div>
         </div>
