@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://watchtrace.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://watchtrace.app/#how-it-works</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://watchtrace.app/pricing</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://watchtrace.app/contact</loc><changefreq>monthly</changefreq></url>
-  <url><loc>https://watchtrace.app/files/watchtrace-setup-guide.pdf</loc><changefreq>monthly</changefreq></url>
+  <url>
+    <loc>https://watchtrace.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://watchtrace.app/sample_report.pdf</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://watchtrace.app/WatchTrace%20Setup%20Guide%20%F0%9F%93%84.pdf</loc>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
