@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="theme-color" content="#0ea5e9">
     
     <!-- SEO Meta Tags -->
     <title>WatchTrace — Daily Visitor Analytics by Email (Simple PDF Reports)</title>
@@ -16,13 +20,13 @@
     <meta property="og:title" content="WatchTrace — Daily Visitor Analytics by Email">
     <meta property="og:description" content="Daily visitor PDF reports at 9 AM. No dashboards. No logins.">
     <meta property="og:url" content="https://watchtrace.app/">
-    <meta property="og:image" content="https://watchtrace.app/og-image.png">
+    <meta property="og:image" content="https://watchtrace.app/og-image.svg">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WatchTrace — Daily Visitor Analytics by Email">
     <meta name="twitter:description" content="Daily visitor PDF reports at 9 AM. Simple and clean.">
-    <meta name="twitter:image" content="https://watchtrace.app/og-image.png">
+    <meta name="twitter:image" content="https://watchtrace.app/og-image.svg">
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
@@ -31,7 +35,22 @@
       "@type": "Organization",
       "name": "WatchTrace",
       "url": "https://watchtrace.app/",
-      "logo": "https://watchtrace.app/logo.png"
+      "logo": "https://watchtrace.app/logo.svg"
+    }
+    </script>
+
+    <!-- WebSite + SearchAction Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://watchtrace.app/",
+      "name": "WatchTrace",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.google.com/search?q=site%3Awatchtrace.app+{search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
     

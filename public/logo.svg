@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">WatchTrace Logo</title>
+  <desc id="desc">Minimal letter W icon inside rounded square</desc>
+  <rect x="16" y="16" width="480" height="480" rx="72" fill="#0ea5e9"/>
+  <path d="M120 160l56 192 80-128 80 128 56-192" fill="none" stroke="#fff" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
