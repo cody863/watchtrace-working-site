@@ -34,16 +34,16 @@ export default function App() {
           </div>
         </div>
 
-        <div className="mt-6">
-          <a 
-            href="/WatchTrace-Sample-Report.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[#1a73e8] underline text-base font-medium hover:text-[#0c59cf] transition-colors"
-          >
-            Download Sample Report
-          </a>
-        </div>
+                 <div className="mt-6">
+           <a 
+             href="/sample_report.pdf" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="text-[#1a73e8] underline text-base font-medium hover:text-[#0c59cf] transition-colors"
+           >
+             Download Sample Report
+           </a>
+         </div>
       </section>
 
       {/* Features Section */}
